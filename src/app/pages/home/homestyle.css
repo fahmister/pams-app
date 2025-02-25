@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section{
+    @apply relative bg-gray-900  h-screen flex items-center px-8 text-white;
+}
+
+.hero-text{
+    @apply text-white text-lg left-24;
+}
+
+.hero-title{
+    @apply text-[#A6BBCC] text-6xl font-bold mt-4 left-24;
+}
+
+.hero-button{
+    @apply mt-4 px-24 py-4 bg-yellow-300 font-semibold rounded-lg shadow-md hover:bg-blue-600;
+}
+
+.hero-image{
+    @apply h-[736px] w-[600] absolute top-[165px] right-[106px] left-[734px] rounded-3xl shadow-lg;
+}
