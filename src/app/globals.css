@@ -4,18 +4,26 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1F2937;
+  --primary: #FFC107; /* Warna kuning */
+  --secondary: #FF8C42; /* Warna orange */
+  --geist-sans: 'Geist Sans', sans-serif;
+  --geist-mono: 'Geist Mono', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1F2937;
+    --foreground: #FFFFFF;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Gradasi kuning ke orange */
+.bg-gradient-yellow-orange {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
 }
