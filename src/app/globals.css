@@ -3,27 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #1F2937;
-  --primary: #FFC107; /* Warna kuning */
-  --secondary: #FF8C42; /* Warna orange */
   --geist-sans: 'Geist Sans', sans-serif;
   --geist-mono: 'Geist Mono', monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1F2937;
-    --foreground: #FFFFFF;
-  }
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Gradasi kuning ke orange */
-.bg-gradient-yellow-orange {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+h1, h2, h3 {
+  font-family: var(--geist-mono);
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 5s ease infinite;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
 }
